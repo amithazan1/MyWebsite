@@ -9,23 +9,23 @@ export default function AboutMe() {
   return (
     <Grid
       container
-      spacing={2}
       justifyContent="center" // Centers horizontally
       alignItems="center" // Centers vertically
       sx={{
-        position: "relative",
-        top: "6vh",
-        width: "100%",
-        height: "94vh",
+        width: "100vw",
+        height: "100vh",
+        padding: "16px",
       }}
     >
       {/* Left: Image */}
-      <Grid size={{ xs: 4, sm: 5, lg: 3 }}>
+      <Grid
+        size={{ xs: 12, sm: 4, lg: 5 }}
+        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      >
         <Box
           component="img"
           sx={{
-            width: "90",
-            height: "80",
+            maxWidth: "400px", // Limit image size for responsiveness
           }}
           alt="amit"
           src="./about-emoji.png" // Replace with your image URL
@@ -33,10 +33,12 @@ export default function AboutMe() {
       </Grid>
 
       {/* Right: Card */}
-      <Grid size={{ xs: 8, sm: 5, lg: 5 }}>
+      <Grid size={{ xs: 12, sm: 8, lg: 5 }}>
         <Card
           sx={{
             boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
+            maxHeight: "500px",
+            maxWidth: "100%",
           }}
         >
           <CardContent>

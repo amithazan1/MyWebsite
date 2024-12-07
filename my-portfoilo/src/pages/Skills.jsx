@@ -56,67 +56,61 @@ const categories = {
 };
 export default function Skills() {
   return (
-    <ThemeProvider theme={beautyBeastTheme}>
-      <Box
-        component="div"
-        sx={{
-          position: "relative",
-          top: "10vh",
-          width: "100vw",
-          height: "90vh",
-          zIndex: 1000,
-        }}
-      >
-        {Object.keys(categories).map((category) => (
-          <Stack direction="column" justifyContent="center">
-            <Typography
-              className="nunito-400"
-              variant="h5"
-              gutterBottom
-              color="primary"
-              sx={{ textAlign: "center" }}
-            >
-              {category}
-            </Typography>
-            <Grid container spacing={3} justifyContent="center">
-              {categories[category].map((skill, index) => (
-                <Grid item key={index} xs={6} sm={4} md={3} lg={2}>
-                  <Box
-                    sx={{
-                      backgroundColor: "primary.dark",
-                      position: "relative",
-                      minWidth: "100px",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      padding: "10px",
-                      color: "white",
-                      borderRadius: "8px",
-                      boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
-                      transition: "transform 0.3s",
-                      "&:hover": {
-                        transform: "scale(1.1)",
-                        boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.2)",
-                      },
-                    }}
+    <Box
+      component="div"
+      sx={{
+        position: "relative",
+        top: "10vh",
+      }}
+    >
+      {Object.keys(categories).map((category) => (
+        <Stack direction="column" justifyContent="center">
+          <Typography
+            className="nunito-400"
+            variant="h5"
+            gutterBottom
+            color="primary"
+            sx={{ textAlign: "center", fontSize: "18px" }}
+          >
+            {category}
+          </Typography>
+          <Grid container spacing={3} justifyContent="center">
+            {categories[category].map((skill, index) => (
+              <Grid item key={index} xs={3} sm={1} md={3} lg={2}>
+                <Box
+                  sx={{
+                    backgroundColor: "primary.dark",
+                    position: "relative",
+                    minWidth: "80px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    padding: "5px",
+                    color: "white",
+                    borderRadius: "8px",
+                    boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+                    transition: "transform 0.3s",
+                    "&:hover": {
+                      transform: "scale(1.1)",
+                      boxShadow: "0px 6px 16px rgba(0, 0, 0, 0.2)",
+                    },
+                    marginBottom: "5px",
+                  }}
+                >
+                  {skill.icon}
+                  <Typography
+                    variant="subtitle1"
+                    className="anek-devanagari-200"
+                    sx={{ marginTop: "2px" }}
                   >
-                    {skill.icon}
-                    <Typography
-                      variant="subtitle1"
-                      className="anek-devanagari-200"
-                      sx={{
-                        marginTop: "10px",
-                      }}
-                    >
-                      {skill.name}
-                    </Typography>
-                  </Box>
-                </Grid>
-              ))}
-            </Grid>
-          </Stack>
-        ))}
-      </Box>
-    </ThemeProvider>
+                    {skill.name}
+                  </Typography>
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+        </Stack>
+      ))}
+    </Box>
   );
 }

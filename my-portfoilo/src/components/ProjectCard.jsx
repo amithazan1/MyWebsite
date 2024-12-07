@@ -13,11 +13,15 @@ export default function ProjectCard({ name, description, image, onClick }) {
     <Card
       sx={{
         position: "relative",
+        height: { xs: "30vh", md: "35vh" },
       }}
     >
       <Grid container spacing={2} onClick={onClick} sx={{ cursor: "pointer" }}>
         {/** project image */}
-        <Grid size={4} sx={{ height: "26vh", bgcolor: "#000" }}>
+        <Grid
+          size={4}
+          sx={{ height: { xs: "30vh", md: "35vh" }, bgcolor: "#000" }}
+        >
           <CardMedia
             component="img"
             sx={{

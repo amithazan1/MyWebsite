@@ -25,10 +25,6 @@ export const beautyBeastTheme = createTheme({
         body: {
           background:
             "linear-gradient(10deg, rgba(232,195,101,1) 41%, rgba(231,194,98,1) 67%, rgba(255,235,131,1) 100%, rgba(218,165,32,1) 100%)",
-          margin: 0,
-          padding: 0,
-          height: "100vh",
-          width: "100vw",
         },
       },
     },

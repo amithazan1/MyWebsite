@@ -1,4 +1,31 @@
-* {
-  margin: 0;
-  padding: 0;
+body,
+html,
+#root {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default paddings */
+  height: 100vh; /* Set body and html to full height */
+  width: 100vw; /* Set body and html to full height */
+}
+
+/** scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #615353;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #615353;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b2a0a0;
 }

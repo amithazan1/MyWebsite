@@ -15,14 +15,6 @@ import SparklesBackground from "./components/SparklesBackground";
 import { beautyBeastTheme } from "./assets/theme";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const BackgroundBox = styled("div")({
-  height: "100vh",
-  backgroundImage: "url(./golden-background.jpg)",
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "center",
-});
-
 function App() {
   return (
     <>

@@ -19,58 +19,57 @@ export default function Projects() {
   };
   return (
     <>
-      <Box
+      <Grid
+        container
+        justifyContent="center" // Centers horizontally
+        alignItems="center" // Centers vertically
+        spacing={2}
         sx={{
-          display: "flex",
-          flexDirection: "column", // Stack items vertically
-          justifyContent: "center", // Center items vertically
-          alignItems: "center", // Center items horizontally
-          height: "100vh", // Ensure it takes full viewport height
-          marginTop: { xs: "15vh", md: 0 }, // Start from 10vh on small screens
+          height: "100vh", // Ensure full viewport height for vertical centering
+          width: "100%",
+          paddingTop: { xs: "10vh" },
+          paddingBottom: { xs: "5vh" },
+          overflow: { xs: "auto", md: "hidden" },
         }}
       >
-        <Grid
-          container
-          justifyContent="center" // Centers horizontally
-          spacing={2}
-          rowSpacing={3}
-          columnSpacing={4}
-        >
-          <Grid size={{ xs: 10, md: 5 }}>
-            <ProjectCard
-              name="MidMeet"
-              description="MidMeet is a web application that suggests a convenient meeting location for users based on their locations and preferences.
+        <Grid size={{ xs: 10, md: 5 }}>
+          <ProjectCard
+            name="MidMeet"
+            description="MidMeet is a web application that suggests a convenient meeting location for users based on their locations and preferences.
             The app leverages the Google Places API to provide recommendations for restaurants, activities, and more."
-              image="./route-icon.png"
-              onClick={() => handleCardClick("MidMeet")}
-            />
-          </Grid>
-          <Grid size={{ xs: 10, md: 5 }}>
-            <ProjectCard
-              name="Dibor"
-              description="Dibor is a web-based chat application inspired by WhatsApp Web "
-              image="./chat-app.png"
-              onClick={() => handleCardClick("Dibor")}
-            />
-          </Grid>
-          <Grid size={{ xs: 10, md: 5 }}>
-            <ProjectCard
-              name="KNN classifier"
-              description="Dibor is a web-based chat application inspired by WhatsApp Web "
-              image="./KNN.jpg"
-              onClick={() => handleCardClick("KNN classifier")}
-            />
-          </Grid>
-          <Grid size={{ xs: 10, md: 5 }}>
-            <ProjectCard
-              name="arkanoid game"
-              description="Dibor is a web-based chat application inspired by WhatsApp Web "
-              image="./arkanoid.png"
-              onClick={() => handleCardClick("arkanoid game")}
-            />
-          </Grid>
+            image="./route-icon.png"
+            onClick={() => handleCardClick("MidMeet")}
+          />
         </Grid>
-      </Box>
+        <Grid size={{ xs: 10, md: 5 }}>
+          <ProjectCard
+            name="Dibor"
+            description="Dibor is a web-based chat application inspired by WhatsApp Web "
+            image="./chat-app.png"
+            onClick={() => handleCardClick("Dibor")}
+          />
+        </Grid>
+        <Grid size={{ xs: 10, md: 5 }}>
+          <ProjectCard
+            name="KNN classifier"
+            description="
+               A client-server system for data classification using a multi-threaded server architecture in C++.
+               The server handles client requests concurrently to classify data efficiently. "
+            image="./KNN.jpg"
+            onClick={() => handleCardClick("KNN classifier")}
+          />
+        </Grid>
+        <Grid size={{ xs: 10, md: 5 }}>
+          <ProjectCard
+            name="arkanoid game"
+            description="
+              Created an Arkanoid game in Java using object-oriented programming.
+               The game includes features like paddle movement, ball collisions, and brick-breaking mechanics. "
+            image="./arkanoid.png"
+            onClick={() => handleCardClick("arkanoid game")}
+          />
+        </Grid>
+      </Grid>
     </>
   );
 }
