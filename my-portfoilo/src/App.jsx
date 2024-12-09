@@ -12,15 +12,15 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Skills from "./pages/Skills";
 import SparklesBackground from "./components/SparklesBackground";
-import { beautyBeastTheme } from "./assets/theme";
+import { beautyBeastTheme, frozenTheme } from "./assets/theme";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <ThemeProvider theme={beautyBeastTheme}>
+      <ThemeProvider theme={frozenTheme}>
         <CssBaseline />
-        <SparklesBackground />
+
         <BrowserRouter>
           <TopBar />
           <Routes>

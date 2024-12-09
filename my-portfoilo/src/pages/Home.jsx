@@ -17,60 +17,64 @@ export default function Home() {
         justifyContent="center" // Centers horizontally
         alignItems="center" // Centers vertically
         sx={{
-          height: "100%",
+          height: "100vh", // Full viewport height
           width: "100%",
+          textAlign: { xs: "center", sm: "left" }, // Center text for xs screens
+          marginTop: { xs: 5, sm: 0 },
         }}
       >
         {/** Left: text */}
-        <Grid size={{ xs: 12, sm: 6, lg: 4 }}>
-          <Box
-            sx={{
-              width: "100%",
-              marginLeft: 5,
-              marginTop: 15,
-            }}
+        <Grid
+          size={{ xs: 12, sm: 6, lg: 4 }}
+          sx={{
+            display: "flex",
+            flexDirection: "column", // Stack text and buttons
+            justifyContent: "center", // Center vertically
+            alignItems: { xs: "center", sm: "flex-start" }, // Align text on xs
+            padding: { xs: 2, sm: 5 },
+          }}
+        >
+          <Typography
+            variant="h4"
+            component="div"
+            color="primary.dark"
+            className="acme-regular"
+            sx={{ marginBottom: 2 }}
           >
-            <Typography
-              variant="h4"
-              component="div"
-              color="primary.dark"
-              className="acme-regular"
-            >
-              Hi There,
-            </Typography>
+            Hi There,
+          </Typography>
 
-            <Typography
-              className="acme-regular"
-              variant="h4"
-              component="div"
-              color="primary.dark"
-            >
-              I'm Amit Hazan,
-            </Typography>
+          <Typography
+            className="acme-regular"
+            variant="h4"
+            component="div"
+            color="primary.dark"
+            sx={{ marginBottom: 2 }}
+          >
+            I'm Amit Hazan,
+          </Typography>
 
-            <Typography
-              className="anek-devanagari-200"
-              variant="body1"
-              component="div"
-              color="primary.dark"
-            >
-              B.sc in Computer Science from Bar-Ilan University
-            </Typography>
-          </Box>
+          <Typography
+            className="anek-devanagari-200"
+            variant="body1"
+            component="div"
+            color="primary.dark"
+            sx={{ marginBottom: 4 }}
+          >
+            B.sc in Computer Science from Bar-Ilan University
+          </Typography>
+
           <Box
             sx={{
-              alignContent: "center",
-              alignItems: "center",
-              alignSelf: "center",
-              height: "10vh",
-              marginLeft: 5,
-              marginRight: 5,
+              display: "flex",
+              justifyContent: { xs: "center", sm: "flex-start" }, // Center buttons on xs
+              gap: 2,
             }}
           >
             <IconButton
               aria-label="github"
               color="primary"
-              sx={{ bgcolor: "black.main", margin: 1 }}
+              sx={{ bgcolor: "black.main" }}
               onClick={() =>
                 window.open("https://github.com/amithazan1", "_blank")
               }
@@ -89,11 +93,15 @@ export default function Home() {
             </IconButton>
           </Box>
         </Grid>
+
         {/** Right: image */}
-        <Grid size={{ xs: 6, sm: 5, md: 4, lg: 3 }}>
+        <Grid size={{ xs: 8, sm: 5, md: 4, lg: 3 }}>
           <Box
             sx={{
-              marginTop: 5,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100%",
             }}
           >
             <Avatar

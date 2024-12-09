@@ -12,28 +12,42 @@ export default function AboutMe() {
       justifyContent="center" // Centers horizontally
       alignItems="center" // Centers vertically
       sx={{
-        width: "100vw",
-        height: "100vh",
-        padding: "16px",
+        height: "100vh", // Full viewport height
+        width: "100%",
+        marginTop: { xs: 5, sm: 0 },
       }}
     >
       {/* Left: Image */}
       <Grid
-        size={{ xs: 12, sm: 4, lg: 5 }}
-        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+        size={{ xs: 8, md: 5 }}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: "100%",
+        }}
       >
         <Box
           component="img"
-          sx={{
-            maxWidth: "400px", // Limit image size for responsiveness
-          }}
+          sx={{ maxHeight: "600px" }}
           alt="amit"
           src="./about-emoji.png" // Replace with your image URL
         />
       </Grid>
 
       {/* Right: Card */}
-      <Grid size={{ xs: 12, sm: 8, lg: 5 }}>
+      <Grid
+        size={{ sm: 10, md: 5 }}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: "100%",
+          padding: "10px",
+        }}
+      >
         <Card
           sx={{
             boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",

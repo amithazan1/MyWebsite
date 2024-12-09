@@ -29,7 +29,6 @@ export default function Projects() {
           width: "100%",
           paddingTop: { xs: "10vh" },
           paddingBottom: { xs: "5vh" },
-          overflow: { xs: "auto", md: "hidden" },
         }}
       >
         <Grid size={{ xs: 10, md: 5 }}>

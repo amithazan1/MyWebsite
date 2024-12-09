@@ -16,7 +16,13 @@ export default function TopBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position="fixed"
-        sx={{ background: "primary", height: "6vh", opacity: 0.6 }}
+        sx={{
+          background: "primary",
+          opacity: 0.6,
+          width: "100%", // Ensures full width
+          left: 0, // Align to the left edge
+          right: 0, // Align to the right edge
+        }}
       >
         <Toolbar sx={{ justifyContent: "center" }}>
           <Button color="inherit" onClick={() => handleNavigate("/")}>

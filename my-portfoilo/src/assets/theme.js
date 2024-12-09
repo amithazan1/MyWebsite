@@ -31,21 +31,34 @@ export const beautyBeastTheme = createTheme({
   },
 });
 
-export const nightTheme = createTheme({
+export const frozenTheme = createTheme({
   palette: {
-    mode: "dark",
+    mode: "light",
     primary: {
-      main: "#bb86fc",
+      main: "#000000", //blue
     },
     secondary: {
-      main: "#03dac6",
+      main: "#000000", //black
     },
     background: {
-      default: "#121212",
-      paper: "#1e1e1e",
+      default: "#7ff0e6", //light blue
+      paper: "#b1fff8", //gold
     },
     text: {
-      primary: "#ffffff",
+      primary: "#000000",
+    },
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          background: "url('./frozen_background1.jpg')", // Adjust this path to match your image location
+          backgroundSize: "cover", // Ensure the image covers the viewport
+          backgroundRepeat: "no-repeat", // Prevent tiling
+          backgroundPosition: "center", // Center the image
+          height: "100vh", // Optional: ensure the background spans full height
+        },
+      },
     },
   },
 });

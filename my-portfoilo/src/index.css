@@ -1,10 +1,12 @@
 body,
 html,
 #root {
+  height: 100%; /* Full viewport height */
+  width: 100%; /* Full viewport width */
   margin: 0; /* Remove default margins */
   padding: 0; /* Remove default paddings */
-  height: 100vh; /* Set body and html to full height */
-  width: 100vw; /* Set body and html to full height */
+  box-sizing: border-box; /* Ensure consistent box-sizing */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /** scroll bar */
@@ -15,13 +17,13 @@ html,
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #615353;
+  background: #f9f9f9;
   border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #615353;
+  background: #c8c8c8;
   border-radius: 10px;
 }
 
