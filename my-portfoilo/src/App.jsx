@@ -14,13 +14,14 @@ import Skills from "./pages/Skills";
 import SparklesBackground from "./components/SparklesBackground";
 import { beautyBeastTheme, frozenTheme } from "./assets/theme";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SnowBackground from "./backgrounds/frozen/SnowBackground";
 
 function App() {
   return (
     <>
       <ThemeProvider theme={frozenTheme}>
         <CssBaseline />
-
+        <SparklesBackground />
         <BrowserRouter>
           <TopBar />
           <Routes>

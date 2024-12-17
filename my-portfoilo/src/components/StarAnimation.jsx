@@ -11,7 +11,7 @@ const StarAnimation = () => {
     { top: "50%", left: "2%", size: "11%" },
     { top: "35%", left: "50%", size: "7%" },
     { top: "5%", left: "85%", size: "6%" },
-    //{ top: "90%", left: "5%", size: "9%" },
+    { top: "40%", left: "65%", size: "9%" },
   ];
 
   return (

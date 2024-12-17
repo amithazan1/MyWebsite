@@ -35,14 +35,14 @@ export const frozenTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#000000", //blue
+      main: "#000000", //black
     },
     secondary: {
       main: "#000000", //black
     },
     background: {
-      default: "#7ff0e6", //light blue
-      paper: "#b1fff8", //gold
+      default: "#89c9eb", //light blue
+      paper: "#a6dbf7", //light blue
     },
     text: {
       primary: "#000000",
@@ -52,11 +52,8 @@ export const frozenTheme = createTheme({
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          background: "url('./frozen_background1.jpg')", // Adjust this path to match your image location
-          backgroundSize: "cover", // Ensure the image covers the viewport
-          backgroundRepeat: "no-repeat", // Prevent tiling
-          backgroundPosition: "center", // Center the image
-          height: "100vh", // Optional: ensure the background spans full height
+          background:
+            "linear-gradient(180deg, rgba(17,100,178,1) 0%, rgba(137,200,235,1) 100%)",
         },
       },
     },

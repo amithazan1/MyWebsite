@@ -54,6 +54,7 @@ const SparklesBackground = () => {
 
   return (
     <>
+      {/** 
       {sparkles.map((sparkle, index) => (
         <SparkleShape
           key={index}
@@ -62,6 +63,7 @@ const SparklesBackground = () => {
           y={sparkle.y}
         />
       ))}
+      */}
       <StarAnimation />
     </>
   );
