@@ -1,0 +1,26 @@
+.acme-regular {
+  font-family: "Acme", serif !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.anek-devanagari-200 {
+  font-family: "Anek Devanagari", serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400 !important;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.nunito-400 {
+  font-family: "Nunito", serif !important;
+  font-optical-sizing: auto;
+  font-weight: 1000 !important;
+  font-style: normal;
+}
+
+.spicy-rice-regular {
+  font-family: "Spicy Rice", serif !important;
+  font-weight: 400 !important;
+  font-style: normal;
+}
