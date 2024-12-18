@@ -1,13 +1,9 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import { styled, alpha } from "@mui/material/styles";
+import ThemeButton from "../themes/ThemeButton";
 
 export default function TopBar() {
   // navigate between the different pages in the website
@@ -15,7 +11,6 @@ export default function TopBar() {
   const handleNavigate = (path) => {
     navigate(path);
   };
-
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
@@ -41,6 +36,7 @@ export default function TopBar() {
           <Button color="inherit" onClick={() => handleNavigate("/projects")}>
             Projects
           </Button>
+          <ThemeButton />
         </Toolbar>
       </AppBar>
     </Box>
