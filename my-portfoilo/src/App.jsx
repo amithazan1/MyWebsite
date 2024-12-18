@@ -8,19 +8,22 @@ import Stack from "@mui/material/Stack";
 import Projects from "./pages/Projects";
 import AboutMe from "./pages/AboutMe";
 import { styled } from "@mui/system";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Skills from "./pages/Skills";
 import SparklesBackground from "./components/SparklesBackground";
 import { beautyBeastTheme, frozenTheme } from "./assets/theme";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SnowBackground from "./backgrounds/frozen/SnowBackground";
+import MouseFollower from "./components/MouseFollower";
+import { ThemeContextProvider } from "./themes/ThemeContext";
 
 function App() {
   return (
     <>
-      <ThemeProvider theme={frozenTheme}>
+      <ThemeContextProvider>
         <CssBaseline />
+        <MouseFollower />
         <SparklesBackground />
         <BrowserRouter>
           <TopBar />
@@ -31,7 +34,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
           </Routes>
         </BrowserRouter>
-      </ThemeProvider>
+      </ThemeContextProvider>
     </>
   );
 }
