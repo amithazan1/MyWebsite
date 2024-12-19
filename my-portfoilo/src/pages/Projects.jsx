@@ -11,12 +11,9 @@ export default function Projects() {
     Dibor: "https://github.com/SimonFraiberg/dibor-Web",
     "KNN classifier":
       "https://github.com/SimonFraiberg/AdvancedProgramming-1-part-4",
-    "arkanoid game": "https://github.com/yourusername/arkanoid-game",
+    "arkanoid game": "https://github.com/amithazan1/Arkanoid",
   };
 
-  const handleCardClick = (projectName) => {
-    window.open(projectLinks[projectName], "_blank");
-  };
   return (
     <>
       <Grid
@@ -37,7 +34,7 @@ export default function Projects() {
             description="MidMeet is a web application that suggests a convenient meeting location for users based on their locations and preferences.
             The app leverages the Google Places API to provide recommendations for restaurants, activities, and more."
             image="./route-icon.png"
-            onClick={() => handleCardClick("MidMeet")}
+            gitLink={projectLinks["MidMeet"]}
           />
         </Grid>
         <Grid size={{ xs: 10, md: 5 }}>
@@ -45,7 +42,7 @@ export default function Projects() {
             name="Dibor"
             description="Dibor is a web-based chat application inspired by WhatsApp Web "
             image="./chat-app.png"
-            onClick={() => handleCardClick("Dibor")}
+            gitLink={projectLinks["Dibor"]}
           />
         </Grid>
         <Grid size={{ xs: 10, md: 5 }}>
@@ -55,7 +52,7 @@ export default function Projects() {
                A client-server system for data classification using a multi-threaded server architecture in C++.
                The server handles client requests concurrently to classify data efficiently. "
             image="./KNN.jpg"
-            onClick={() => handleCardClick("KNN classifier")}
+            gitLink={projectLinks["KNN classifier"]}
           />
         </Grid>
         <Grid size={{ xs: 10, md: 5 }}>
@@ -65,7 +62,7 @@ export default function Projects() {
               Created an Arkanoid game in Java using object-oriented programming.
                The game includes features like paddle movement, ball collisions, and brick-breaking mechanics. "
             image="./arkanoid.png"
-            onClick={() => handleCardClick("arkanoid game")}
+            gitLink={projectLinks["arkanoid game"]}
           />
         </Grid>
       </Grid>
