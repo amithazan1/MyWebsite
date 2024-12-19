@@ -59,3 +59,33 @@ export const frozenTheme = createTheme({
     },
   },
 });
+
+export const wickedTheme = createTheme({
+  palette: {
+    mode: "light",
+    primary: {
+      main: "#000000", //black
+    },
+    secondary: {
+      main: "#000000", //black
+    },
+    background: {
+      default: "#89c9eb", //light blue
+      paper:
+        "linear-gradient(45deg, rgba(255,220,249,1) 33%, rgba(59,220,95,1) 96%)", //pink and green
+    },
+    text: {
+      primary: "#000000",
+    },
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          background:
+            "linear-gradient(45deg, rgba(255,189,244,1) 33%, rgba(52,207,86,1) 96%);",
+        },
+      },
+    },
+  },
+});
