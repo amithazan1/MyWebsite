@@ -1,6 +1,6 @@
 import { createContext, useState, useContext } from "react";
 import { ThemeProvider } from "@mui/material/styles";
-import { beautyBeastTheme, frozenTheme } from "../assets/theme";
+import { beautyBeastTheme, frozenTheme, wickedTheme } from "../assets/theme";
 
 // Context for theme update function
 const ThemeUpdateContext = createContext();
@@ -21,6 +21,10 @@ export const ThemeContextProvider = ({ children }) => {
       case "Frozen":
         setTheme(frozenTheme);
         break;
+      case "Wicked":
+        setTheme(wickedTheme);
+        break;
+
       default:
         console.warn("Unknown theme selected");
     }
