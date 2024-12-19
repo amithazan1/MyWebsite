@@ -1,4 +1,4 @@
-## MY WEBSITE
+<h1 style="color: #1c9191;"> MY WEBSITE </h1> 
 
 This project is a dynamic portfolio website built with React inspired by my love for Disney.  
 It incorporates Material-UI (MUI) for styling and theming, along with custom React components to bring a magical and engaging experience to life.
