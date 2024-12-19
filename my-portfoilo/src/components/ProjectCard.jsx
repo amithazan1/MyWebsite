@@ -7,8 +7,9 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid2";
 import "../Fonts.css";
+import GithubCorner from "react-github-corner";
 
-export default function ProjectCard({ name, description, image, onClick }) {
+export default function ProjectCard({ name, description, image, gitLink }) {
   return (
     <Card
       sx={{
@@ -16,7 +17,7 @@ export default function ProjectCard({ name, description, image, onClick }) {
         height: { xs: "30vh", md: "35vh" },
       }}
     >
-      <Grid container spacing={2} onClick={onClick} sx={{ cursor: "pointer" }}>
+      <Grid container spacing={2} sx={{ cursor: "pointer" }}>
         {/** project image */}
         <Grid
           size={4}
@@ -53,9 +54,7 @@ export default function ProjectCard({ name, description, image, onClick }) {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small" color="#000">
-              Learn More
-            </Button>
+            <GithubCorner href={gitLink} size={50} />
           </CardActions>
         </Grid>
       </Grid>
