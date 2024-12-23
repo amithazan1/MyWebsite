@@ -12,7 +12,7 @@ export const beautyBeastTheme = createTheme({
     },
     background: {
       default: "rgba(255,253,131,0.1)", //yellow
-      paper: "rgba(231,194,98,0.5)", //gold
+      paper: "#fffd96", //yellow
     },
 
     text: {
