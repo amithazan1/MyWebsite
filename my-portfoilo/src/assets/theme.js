@@ -12,7 +12,7 @@ export const beautyBeastTheme = createTheme({
     },
     background: {
       default: "rgba(255,253,131,0.1)", //yellow
-      paper: "rgba(231,194,98,0.5)", //gold
+      paper: "#fffd96", //yellow
     },
 
     text: {
@@ -71,8 +71,7 @@ export const wickedTheme = createTheme({
     },
     background: {
       default: "#89c9eb", //light blue
-      paper:
-        "linear-gradient(45deg, rgba(255,220,249,1) 33%, rgba(59,220,95,1) 96%)", //pink and green
+      paper: "#74ff93", // green
     },
     text: {
       primary: "#000000",
