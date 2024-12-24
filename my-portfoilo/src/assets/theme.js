@@ -71,7 +71,7 @@ export const wickedTheme = createTheme({
     },
     background: {
       default: "#89c9eb", //light blue
-      paper: "#74ff93", //green
+      paper: "#74ff93", // green
     },
     text: {
       primary: "#000000",
