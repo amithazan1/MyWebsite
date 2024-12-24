@@ -22,7 +22,7 @@ export default function Projects() {
         alignItems="center" // Centers vertically
         spacing={2}
         sx={{
-          height: "100vh", // Ensure full viewport height for vertical centering
+          height: { sm: "100vh" }, // Ensure full viewport height for vertical centering
           width: "100%",
           paddingTop: { xs: "10vh" },
           paddingBottom: { xs: "5vh" },

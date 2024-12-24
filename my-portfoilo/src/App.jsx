@@ -17,13 +17,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SnowBackground from "./backgrounds/frozen/SnowBackground";
 import MouseFollower from "./components/MouseFollower";
 import { ThemeContextProvider } from "./themes/ThemeContext";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 function App() {
+  const isMobile = useMediaQuery("(max-width:500px)");
   return (
     <>
       <ThemeContextProvider>
         <CssBaseline />
-        <MouseFollower />
+        {!isMobile && <MouseFollower />}
         <SparklesBackground />
         <BrowserRouter>
           <TopBar />

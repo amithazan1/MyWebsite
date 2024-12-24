@@ -36,19 +36,41 @@ export default function ProjectCard({ name, description, image, gitLink }) {
         </Grid>
         {/** project description */}
         <Grid size={8}>
-          <CardContent>
+          <CardContent
+            sx={{
+              maxHeight: { xs: "25vh", md: "30vh" }, // Adjust the maxHeight to fit your card's design
+              overflowY: "auto",
+            }}
+          >
             <Typography
               gutterBottom
               className="nunito-400"
               variant="h5"
               component="div"
+              sx={{ fontSize: { xs: "16px", sm: "20px" } }}
             >
               {name}
             </Typography>
             <Typography
               variant="body2"
               className="anek-devanagari-200"
-              sx={{ color: "text.secondary" }}
+              sx={{
+                color: "text.secondary",
+                display: "flex",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                flexWrap: "nowrap",
+                "&::-webkit-scrollbar": {
+                  width: "5px",
+                },
+                "&::-webkit-scrollbar-thumb": {
+                  background: "rgba(0,0,0,0.5)",
+                  borderRadius: "5px",
+                },
+                "&::-webkit-scrollbar-thumb:hover": {
+                  background: "rgba(0,0,0,0.7)",
+                },
+              }}
             >
               {description}
             </Typography>

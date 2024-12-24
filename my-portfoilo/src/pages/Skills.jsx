@@ -3,7 +3,6 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Stack from "@mui/material/Stack";
-import Grid from "@mui/material/Grid2";
 import { FaReact, FaNodeJs, FaHtml5, FaJava } from "react-icons/fa";
 import {
   SiJavascript,
