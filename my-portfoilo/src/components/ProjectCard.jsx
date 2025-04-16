@@ -3,18 +3,30 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2";
 import "../Fonts.css";
 import GithubCorner from "react-github-corner";
+import TechStackIcons from "./TechStackIcons";
 
-export default function ProjectCard({ name, description, image, gitLink }) {
+export default function ProjectCard({
+  name,
+  description,
+  image,
+  gitLink,
+  techStack,
+}) {
   return (
     <Card
       sx={{
         position: "relative",
         height: { xs: "30vh", md: "35vh" },
+        transition: "transform 0.3s, box-shadow 0.3s",
+        "&:hover": {
+          transform: "scale(1.02)",
+          boxShadow: 6,
+        },
       }}
     >
       <Grid container spacing={2} sx={{ cursor: "pointer" }}>
@@ -75,6 +87,10 @@ export default function ProjectCard({ name, description, image, gitLink }) {
               {description}
             </Typography>
           </CardContent>
+          {/* Tech stack icons at bottom */}
+          <Box sx={{ px: 2, pb: 1 }}>
+            <TechStackIcons stack={techStack} />
+          </Box>
           <CardActions>
             <GithubCorner href={gitLink} size={50} />
           </CardActions>

@@ -35,6 +35,7 @@ export default function Projects() {
             The app leverages the Google Places API to provide recommendations for restaurants, activities, and more."
             image="./route-icon.png"
             gitLink={projectLinks["MidMeet"]}
+            techStack={["react", "node", "express", "mongodb", "mui"]}
           />
         </Grid>
         <Grid size={{ xs: 10, md: 5 }}>
@@ -43,6 +44,7 @@ export default function Projects() {
             description="Dibor is a web-based chat application inspired by WhatsApp Web "
             image="./chat-app.png"
             gitLink={projectLinks["Dibor"]}
+            techStack={["react", "node", "express", "mongodb", "bootstrap"]}
           />
         </Grid>
         <Grid size={{ xs: 10, md: 5 }}>
@@ -53,6 +55,7 @@ export default function Projects() {
                The server handles client requests concurrently to classify data efficiently. "
             image="./KNN.jpg"
             gitLink={projectLinks["KNN classifier"]}
+            techStack={["cplusplus"]}
           />
         </Grid>
         <Grid size={{ xs: 10, md: 5 }}>
@@ -63,6 +66,7 @@ export default function Projects() {
                The game includes features like paddle movement, ball collisions, and brick-breaking mechanics. "
             image="./arkanoid.png"
             gitLink={projectLinks["arkanoid game"]}
+            techStack={["java"]}
           />
         </Grid>
       </Grid>
