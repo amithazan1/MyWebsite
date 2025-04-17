@@ -43,16 +43,16 @@ export default function Navbar() {
               onClose={toggleDrawer(false)}
             >
               <List>
-                {menuItems.map((item, index) => (
+                {sections.map((section) => (
                   <ListItem
                     button
-                    key={index}
+                    key={section}
+                    href={`#${section}`}
                     onClick={() => {
-                      handleNavigate(item.path);
                       setDrawerOpen(false);
                     }}
                   >
-                    <ListItemText primary={item.text} />
+                    <ListItemText primary={section} />
                   </ListItem>
                 ))}
                 <Divider />
