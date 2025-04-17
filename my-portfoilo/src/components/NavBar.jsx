@@ -1,9 +1,16 @@
 import { useState } from "react";
-
-import { AppBar, Toolbar, Button } from "@mui/material";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
+import {
+  AppBar,
+  Toolbar,
+  Button,
+  useMediaQuery,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemText,
+  Divider,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
 import ThemeButton from "../themes/ThemeButton";
@@ -17,6 +24,7 @@ export default function Navbar() {
   const toggleDrawer = (state) => () => {
     setDrawerOpen(state);
   };
+
   return (
     <AppBar
       position="sticky"
@@ -24,7 +32,7 @@ export default function Navbar() {
       elevation={5}
       sx={{
         backgroundColor: "primary.main",
-        opacity: 0.6,
+        opacity: isMobile ? 0.9 : 0.6,
       }}
     >
       <Toolbar sx={{ justifyContent: "center", gap: 2 }}>
@@ -33,7 +41,7 @@ export default function Navbar() {
             <IconButton
               color="inherit"
               onClick={toggleDrawer(true)}
-              sx={{ position: "absolute", left: 5, p: 0 }}
+              sx={{ position: "absolute", left: 15, p: 0 }}
             >
               <MenuIcon />
             </IconButton>
@@ -42,17 +50,22 @@ export default function Navbar() {
               open={drawerOpen}
               onClose={toggleDrawer(false)}
             >
-              <List>
+              <List sx={{ width: 200 }}>
                 {sections.map((section) => (
                   <ListItem
                     button
                     key={section}
+                    component="a"
                     href={`#${section}`}
-                    onClick={() => {
-                      setDrawerOpen(false);
-                    }}
+                    onClick={() => setDrawerOpen(false)}
+                    className="spicy-rice-regular"
+                    sx={{ color: "text.secondary" }}
                   >
-                    <ListItemText primary={section} />
+                    <ListItemText
+                      primary={
+                        section.charAt(0).toUpperCase() + section.slice(1)
+                      }
+                    />
                   </ListItem>
                 ))}
                 <Divider />

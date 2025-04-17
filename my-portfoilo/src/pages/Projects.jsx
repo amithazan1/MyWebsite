@@ -31,6 +31,17 @@ export default function Projects() {
       >
         <Grid size={{ xs: 10, md: 5 }}>
           <ProjectCard
+            name="Expense Tracker"
+            description="
+              A simple and intuitive Expense Tracker built with GraphQL,
+              React, and Tailwind CSS, designed to help you manage your finances."
+            image="./expenseTracker.png"
+            gitLink={projectLinks["Expense Tracker"]}
+            techStack={["graphQL", "react", "mongoDB", "tailwind"]}
+          />
+        </Grid>
+        <Grid size={{ xs: 10, md: 5 }}>
+          <ProjectCard
             name="MidMeet"
             description="MidMeet is a web application that suggests a convenient meeting location for users based on their locations and preferences.
             The app leverages the Google Places API to provide recommendations for restaurants, activities, and more."
@@ -68,17 +79,6 @@ export default function Projects() {
             image="./arkanoid.png"
             gitLink={projectLinks["arkanoid game"]}
             techStack={["java"]}
-          />
-        </Grid>
-        <Grid size={{ xs: 10, md: 5 }}>
-          <ProjectCard
-            name="Expense Tracker"
-            description="
-              A simple and intuitive Expense Tracker built with GraphQL,
-              React, and Tailwind CSS, designed to help you manage your finances."
-            image="./expenseTracker.png"
-            gitLink={projectLinks["Expense Tracker"]}
-            techStack={["graphQL", "react", "mongoDB", "tailwind"]}
           />
         </Grid>
         <Divider
