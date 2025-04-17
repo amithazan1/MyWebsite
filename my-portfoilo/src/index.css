@@ -7,6 +7,7 @@ html,
   padding: 0; /* Remove default paddings */
   box-sizing: border-box; /* Ensure consistent box-sizing */
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  scroll-behavior: smooth;
 }
 
 /** scroll bar */

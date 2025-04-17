@@ -1,4 +1,5 @@
 import React from "react";
+
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
@@ -6,6 +7,9 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Grid from "@mui/material/Grid2";
 import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+
 import "../Fonts.css";
 
 export default function Home() {
@@ -41,17 +45,17 @@ export default function Home() {
             className="acme-regular"
             sx={{ marginBottom: 2 }}
           >
-            Hi There,
+            I'm Amit Hazan
           </Typography>
 
           <Typography
             className="acme-regular"
-            variant="h4"
+            variant="h6"
             component="div"
             color="primary.dark"
             sx={{ marginBottom: 2 }}
           >
-            I'm Amit Hazan,
+            Full-stack Developer | Softwere Developer
           </Typography>
 
           <Typography
@@ -92,6 +96,17 @@ export default function Home() {
               <LinkedInIcon />
             </IconButton>
           </Box>
+          <Button
+            href="#projects"
+            variant="contained"
+            sx={{
+              mt: 2,
+              mr: 2,
+              justifyContent: { xs: "center", sm: "flex-start" },
+            }}
+          >
+            View My Work
+          </Button>
         </Grid>
 
         {/** Right: image */}
@@ -115,6 +130,16 @@ export default function Home() {
           </Box>
         </Grid>
       </Grid>
+      <Divider
+        variant="middle"
+        sx={{
+          marginTop: 6,
+          borderBottomWidth: "2px",
+          borderColor: "grey.300",
+          width: "80%",
+          marginX: "auto",
+        }}
+      />
     </>
   );
 }

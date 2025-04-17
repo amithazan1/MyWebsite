@@ -32,6 +32,7 @@ const ThemeButton = () => {
         variant="contained"
         disableElevation
         onClick={handleClick}
+        className="nunito-400"
         endIcon={<KeyboardArrowDownIcon />}
       >
         Themes

@@ -17,8 +17,12 @@ export default function ProjectCard({
   gitLink,
   techStack,
 }) {
+  const onClick = () => {
+    window.open(gitLink, "_blank");
+  };
   return (
     <Card
+      onClick={onClick}
       sx={{
         position: "relative",
         height: { xs: "30vh", md: "35vh" },
