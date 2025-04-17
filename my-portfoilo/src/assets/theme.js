@@ -28,6 +28,30 @@ export const beautyBeastTheme = createTheme({
         },
       },
     },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          transition: "0.2s",
+          "&:hover": {
+            transform: "scale(1.05)",
+            boxShadow: 4,
+            backgroundColor: "transparent",
+          },
+        },
+      },
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          transition: "0.2s",
+          "&:hover": {
+            transform: "scale(1.1)",
+            backgroundColor: "transparent",
+            boxShadow: "none",
+          },
+        },
+      },
+    },
   },
 });
 

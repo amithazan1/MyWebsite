@@ -1,17 +1,18 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
+
 import ProjectCard from "../components/ProjectCard";
 import Grid from "@mui/material/Grid2";
+import Divider from "@mui/material/Divider";
 
 export default function Projects() {
   // Define the GitHub URLs for the projects
   const projectLinks = {
-    MidMeet: "https://github.com/SimonFraiberg/MidMeetPublic",
-    Dibor: "https://github.com/SimonFraiberg/dibor-Web",
+    MidMeet: "https://github.com/amithazan1/MidMeetPublic",
+    Dibor: "https://github.com/amithazan1/dibor-Web",
     "KNN classifier":
       "https://github.com/SimonFraiberg/AdvancedProgramming-1-part-4",
     "arkanoid game": "https://github.com/amithazan1/Arkanoid",
+    "Expense Tracker": "https://github.com/amithazan1/ExpenseTracker",
   };
 
   return (
@@ -24,7 +25,7 @@ export default function Projects() {
         sx={{
           height: { sm: "100vh" }, // Ensure full viewport height for vertical centering
           width: "100%",
-          paddingTop: { xs: "10vh" },
+          marginTop: 5,
           paddingBottom: { xs: "5vh" },
         }}
       >
@@ -69,6 +70,26 @@ export default function Projects() {
             techStack={["java"]}
           />
         </Grid>
+        <Grid size={{ xs: 10, md: 5 }}>
+          <ProjectCard
+            name="Expense Tracker"
+            description="
+              A simple and intuitive Expense Tracker built with GraphQL,
+              React, and Tailwind CSS, designed to help you manage your finances."
+            image="./expenseTracker.png"
+            gitLink={projectLinks["Expense Tracker"]}
+            techStack={["graphQL", "react", "mongoDB", "tailwind"]}
+          />
+        </Grid>
+        <Divider
+          variant="middle"
+          sx={{
+            borderBottomWidth: "2px",
+            borderColor: "grey.300",
+            width: "80%",
+            marginTop: 5,
+          }}
+        />
       </Grid>
     </>
   );
